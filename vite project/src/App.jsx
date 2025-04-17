@@ -23,7 +23,7 @@ const Form = () => {
       [name]: type === 'checkbox' ? checked : value,
     });
     
-    // Clear error when user starts typing
+
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -73,13 +73,13 @@ const Form = () => {
     if (validate()) {
       setIsSubmitting(true);
       
-      // Simulate API call
+
       setTimeout(() => {
         console.log('Form submitted:', formData);
         setIsSubmitting(false);
         setSubmitSuccess(true);
         
-        // Reset form after successful submission
+
         setTimeout(() => {
           setFormData({
             firstName: '',
